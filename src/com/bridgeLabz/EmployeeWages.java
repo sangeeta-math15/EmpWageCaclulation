@@ -5,7 +5,7 @@ public class EmployeeWages
 	public static final int IS_PRESENT_full_time=1;
 	public static final int IS_PRESENT_part_time=2;
 	public static final int EMP_RATE_PER_HR=20;
-	public static final int NUM_Of_Working_Days=2;
+	public static final int NUM_Of_Working_Days=20;
 	
 	public static void main(String args[])
 	{
