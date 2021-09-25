@@ -6,15 +6,19 @@ public class EmployeeWages
 	public static final int IS_PRESENT_part_time=2;
 	public static final int EMP_RATE_PER_HR=20;
 	public static final int NUM_Of_Working_Days=20;
+	public static final int MAX_HR_IN_MONTH=100; 
+		
 	
 	public static void main(String args[])
 	{
 		System.out.println("Welcome to EmployeeWage Computation Program on Master Branch");
 		
-		int emphr=0,salary=0,totalSalary=0;
-		
-		for(int day=0;day<NUM_Of_Working_Days;day++)
+		int emphr=0;
+		int totalEmpHr=0,TotalWorkingDays=0;
+		while(totalEmpHr<=MAX_HR_IN_MONTH && TotalWorkingDays<NUM_Of_Working_Days)
 		{
+			TotalWorkingDays++;
+		
 			int empcheck=(int)Math.floor(Math.random()*10)%3;
 			switch(empcheck)
 			{
@@ -27,10 +31,10 @@ public class EmployeeWages
 				default:
 					emphr=0;
 			}
-			salary=emphr*EMP_RATE_PER_HR;
-			totalSalary=totalSalary+salary;
-			System.out.println("EmpWage:" +salary);
+			totalEmpHr=totalEmpHr+emphr;
+			System.out.println("Days:" +TotalWorkingDays + "Emp Hr:" +emphr);
 		}
-		System.out.println("Total Emp Wage" +totalSalary);
+		int totalEMPWage=totalEmpHr*EMP_RATE_PER_HR;
+		System.out.println("Total Emp Wage" +totalEMPWage);
 	}	
 }
